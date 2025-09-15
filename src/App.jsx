@@ -1,12 +1,12 @@
-import React, { useState, Suspense } from 'react';
+import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-const Intro = React.lazy(() => import('./components/Intro'));
-const Header = React.lazy(() => import('./components/Header'));
-const Footer = React.lazy(() => import('./components/Footer'));
-const Hero = React.lazy(() => import('./components/Hero'));
-const AboutSection = React.lazy(() => import('./components/AboutSection'));
-const Projects = React.lazy(() => import('./components/Projects'));
-const Contact = React.lazy(() => import('./components/Contact'));
+import Intro from './components/Intro';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Hero from './components/Hero';
+import AboutSection from './components/AboutSection';
+import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -16,7 +16,7 @@ function App() {
   };
 
   return (
-    <Suspense >
+    <>
       <AnimatePresence>
         {isLoading && <Intro onComplete={handleLoadingComplete} />}
       </AnimatePresence>
@@ -33,7 +33,7 @@ function App() {
           <Footer />
         </div>
       )}
-    </Suspense>
+    </>
   );
 }
 
