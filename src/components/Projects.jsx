@@ -13,8 +13,8 @@ const Projects = () => {
       image: "/img/buymate.webp",
       category: "web",
       technologies: ["React", "CSS"],
-      liveLink: "https://ahmedvbdelaziz.github.io/Portoflio/",
-      githubLink: "https://github.com/ahmedvbdelaziz/Portoflio/",
+      liveLink: "https://buy-mate-x.vercel.app/",
+      githubLink: "https://github.com/ahmedvbdelaziz/BuyMate",
     },
     {
       id: 2,
